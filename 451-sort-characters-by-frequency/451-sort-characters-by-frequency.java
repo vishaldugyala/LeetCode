@@ -22,12 +22,11 @@ class Solution {
                       Map.Entry::getValue,
                       (e1, e2) -> e1, LinkedHashMap::new));
         
-        
+        StringBuilder sb = new StringBuilder();
         for(Map.Entry<Character, Integer> entry : mp2.entrySet()){
             
-            String temp =  entry.getKey().toString().repeat(entry.getValue());
-            sol += temp;
+            sb.append(entry.getKey().toString().repeat(entry.getValue()));
         }
-        return sol;
+        return sb.toString();
     }
 }
